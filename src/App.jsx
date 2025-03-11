@@ -1,8 +1,8 @@
 // import { useState } from 'react';
-import FetchData from './components/FetchData';
+// import FetchData from './components/FetchData';
 import './index.css';
 // import Lightning from './components/Light';
-import UseState from './components/UseState';
+// import UseState from './components/UseState';
 
 
 // import UseEffectHook  from './components/Useeffecthook';
@@ -12,9 +12,13 @@ import UseState from './components/UseState';
 // import Profile from './Profile';
 // import Footer from './Footer';
 // import UselayoutEffectHook from './UselayoutEffectHook';
-import Todo from './components/Todo';
-import UseEffect from './components/UseEffect';
-
+// import Todo from './components/Todo';
+// import UseEffect from './components/UseEffect';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from './pages/Home';
+import About from './pages/About';
+import ContactUs from './pages/ContactUs';
+import NotFound from './pages/NotFound';
 function App() {
 
   // Example 1
@@ -82,10 +86,23 @@ function App() {
   {/* <Todo /> */}
 {/* <UseState /> */}
 
-<UseEffect/>
+{/* <UseEffect/> */}
   
+  {/* Routing tutorial  */}
+<Router>
+      <nav>
+        <Link to="/">Home</Link> | 
+        <Link to="/about">About</Link> | 
+        <Link to="/contact">Contact</Link>
+      </nav>
 
- 
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<ContactUs />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
 
   
   
