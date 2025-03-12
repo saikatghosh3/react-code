@@ -1,4 +1,4 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 // import FetchData from './components/FetchData';
 import './index.css';
 // import Lightning from './components/Light';
@@ -19,7 +19,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import ContactUs from './pages/ContactUs';
 import NotFound from './pages/NotFound';
-function App() {
+import { ThemeProvider } from './ThemeProvider';
+import ThemeToggle from './components/ThemeToggle';
 
   // Example 1
   // const [color, setColor] = useState("red");
@@ -56,45 +57,59 @@ function App() {
 
 
 
+function App() {
+  const [color, setColor] = useState("red");
 
-  return (
-    <div>
-      {/* Example 1  */}
-      {/* <h1>My favourite color is {color}</h1>   
-      <button onClick={changeColor}>Change Color</button> */}
- {/* Eamaple 2 */}
- {/* <h1> MY {car.brand}</h1>
- <h2>It is a {car.color} {car.model} from {car.year}</h2>
- <button onClick={changeColor}>Blue</button>
- */}
+  const changeColor = () => {
+    setColor(color === "red" ? "blue" : "red"); // Toggle between red and blue
+  };
+return (
+
+
+    
+      // {/* Example 1  */}
+      // <h1>My favourite color is {color}</h1>   
+    //  <button onClick={changeColor}>Change Color</button> 
+//  {/* Eamaple 2 */}
+//  {/* <h1> MY {car.brand}</h1>
+//  <h2>It is a {car.color} {car.model} from {car.year}</h2>
+//  <button onClick={changeColor}>Blue</button>
+//  */}
  
- {/* Example 3 */}
+//  {/* Example 3 */}
 
-{/*  
- <h1> count : {count}</h1>
- <button onClick={increaseCount}>Increase</button>
- <button onClick={decreaseCount}>Decrease</button> */}
- {/* <UseEffectHook /> */}
- {/* <UseRefHook/> */}
-    {/* <UseMemoHook /> */}
+// {/*  
+//  <h1> count : {count}</h1>
+//  <button onClick={increaseCount}>Increase</button>
+//  <button onClick={decreaseCount}>Decrease</button> */}
+//  {/* <UseEffectHook /> */}
+//  {/* <UseRefHook/> */}
+//     {/* <UseMemoHook /> */}
 
-    {/* <UseCallBackhook/> */}
-    {/* <Profile/>
-    <Footer/> */}
-  {/* <UselayoutEffectHook/> */}
-  {/* <FetchData /> */}
-  {/* <Todo /> */}
-{/* <UseState /> */}
+//     {/* <UseCallBackhook/> */}
+//     {/* <Profile/>
+//     <Footer/> */}
+//   {/* <UselayoutEffectHook/> */}
+//   {/* <FetchData /> */}
+//   {/* <Todo /> */}
+// {/* <UseState /> */}
 
-{/* <UseEffect/> */}
+// {/* <UseEffect/> */}
   
-  {/* Routing tutorial  */}
+//   {/* Routing tutorial  */}
+
+
+  <ThemeProvider>
+    <div style={{ textAlign: "center", padding: "50px" }}>
 <Router>
       <nav>
         <Link to="/">Home</Link> | 
         <Link to="/about">About</Link> | 
         <Link to="/contact">Contact</Link>
+        <ThemeToggle />
       </nav>
+      <h1 style={{ color }}>My favorite color is {color}</h1>
+      <button onClick={changeColor}>Change Color</button>
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -103,10 +118,13 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
-
-  
-  
+   
     </div>
+    </ThemeProvider>
+  
+    
+  
+
 
   );
 }
