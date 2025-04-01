@@ -2,19 +2,19 @@ import React, { useState } from "react";
 
 function App() {
   const [task, setTask] = useState("");
-  const [tasks, setTasks] = useState([]);
+  const [kajs, setKajs] = useState([]);
 
   // Add Task
   const addTask = () => {
     if (task.trim() !== "") {
-      setTasks([...tasks, task]);
+      setKajs([...kajs, task]);
       setTask(""); // Clear input
     }
   };
 
   // Remove Task
   const removeTask = (index) => {
-    setTasks(tasks.filter((_, i) => i !== index));
+    setKajs(kajs.filter((_, i) => i !== index));
   };
 
   return (
@@ -29,9 +29,9 @@ function App() {
       <button onClick={addTask}>Add</button>
 
       <ul style={{listStyle: "none"}}>
-        {tasks.map((t, index) => (
+        {kajs.map((task, index) => (
           <li key={index}>
-            {t} <button onClick={() => removeTask(index)}>❌</button>
+            {task} <button onClick={() => removeTask(index)}>❌</button>
           </li>
         ))}
       </ul>

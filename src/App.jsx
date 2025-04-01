@@ -1,9 +1,9 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 // import FetchData from './components/FetchData';
 import './index.css';
 // import Lightning from './components/Light';
 // import UseState from './components/UseState';
-
+// import SignUp  from './SignUp';
 
 // import UseEffectHook  from './components/Useeffecthook';
 // import UseRefHook from './components/UseRefHook';
@@ -14,14 +14,23 @@ import './index.css';
 // import UselayoutEffectHook from './UselayoutEffectHook';
 // import Todo from './components/Todo';
 // import UseEffect from './components/UseEffect';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from './pages/Home';
-import About from './pages/About';
-import ContactUs from './pages/ContactUs';
-import NotFound from './pages/NotFound';
-import { ThemeProvider } from './ThemeProvider';
-import ThemeToggle from './components/ThemeToggle';
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import Home from './pages/Home';
+// import About from './pages/About';
+// import ContactUs from './pages/ContactUs';
+// import NotFound from './pages/NotFound';
+// import { ThemeProvider } from './ThemeProvider';
+// import ThemeToggle from './components/ThemeToggle';
 
+// the below examples are for props 
+// import Parents from './components/Parents';
+// import UserProfile from './components/UserProfile';
+// import ProductList from './components/ProductList';
+//  event learing
+// import Inputfield from './components/Inputfield';
+
+// import Simpleform from './components/Simpleform';
+import Bubbling from './components/Bubbling';
   // Example 1
   // const [color, setColor] = useState("red");
 
@@ -58,11 +67,11 @@ import ThemeToggle from './components/ThemeToggle';
 
 
 function App() {
-  const [color, setColor] = useState("red");
+  // const [color, setColor] = useState("red");
 
-  const changeColor = () => {
-    setColor(color === "red" ? "blue" : "red"); // Toggle between red and blue
-  };
+  // const changeColor = () => {
+  //   setColor(color === "red" ? "blue" : "red"); // Toggle between red and blue
+  // };
 return (
 
 
@@ -91,7 +100,7 @@ return (
 //     <Footer/> */}
 //   {/* <UselayoutEffectHook/> */}
 //   {/* <FetchData /> */}
-//   {/* <Todo /> */}
+  //  <Todo /> 
 // {/* <UseState /> */}
 
 // {/* <UseEffect/> */}
@@ -99,29 +108,35 @@ return (
 //   {/* Routing tutorial  */}
 
 
-  <ThemeProvider>
-    <div style={{ textAlign: "center", padding: "50px" }}>
-<Router>
-      <nav>
-        <Link to="/">Home</Link> | 
-        <Link to="/about">About</Link> | 
-        <Link to="/contact">Contact</Link>
-        <ThemeToggle />
-      </nav>
-      <h1 style={{ color }}>My favorite color is {color}</h1>
-      <button onClick={changeColor}>Change Color</button>
+//   <ThemeProvider>
+//     <div style={{ textAlign: "center", padding: "50px" }}>
+// <Router>
+//        <nav>
+//         <Link to="/">Home</Link> | 
+//         <Link to="/about">About</Link> | 
+//         <Link to="/contact">Contact</Link>
+//         <ThemeToggle />
+//       </nav>
+//       <h1 style={{ color }}>My favorite color is {color}</h1>
+//       <button onClick={changeColor}>Change Color</button>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
-   
-    </div>
-    </ThemeProvider>
-  
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/contact" element={<ContactUs />} />
+//         <Route path="*" element={<NotFound />} />
+//       </Routes>
+//     </Router>
+  //  <SignUp />
+//     </div>
+//     </ThemeProvider> 
+  // <Parents />
+
+  // <UserProfile />
+  // <ProductList />
+  // <Inputfield />
+  // <Simpleform />
+  <Bubbling />
     
   
 
