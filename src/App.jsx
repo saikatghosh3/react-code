@@ -30,7 +30,8 @@ import './index.css';
 // import Inputfield from './components/Inputfield';
 
 // import Simpleform from './components/Simpleform';
-import Bubbling from './components/Bubbling';
+// import Bubbling from './components/Bubbling';
+import BasicNav from './components/BasicNav';
   // Example 1
   // const [color, setColor] = useState("red");
 
@@ -136,7 +137,8 @@ return (
   // <ProductList />
   // <Inputfield />
   // <Simpleform />
-  <Bubbling />
+  // <Bubbling />
+  <BasicNav/>
     
   
 
