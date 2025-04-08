@@ -31,7 +31,9 @@ import './index.css';
 
 // import Simpleform from './components/Simpleform';
 // import Bubbling from './components/Bubbling';
-import BasicNav from './components/BasicNav';
+// import BasicNav from './components/BasicNav';
+// import FormReact from './components/FormReact';
+import ContactForm from './components/ContactForm';
   // Example 1
   // const [color, setColor] = useState("red");
 
@@ -138,7 +140,9 @@ return (
   // <Inputfield />
   // <Simpleform />
   // <Bubbling />
-  <BasicNav/>
+  // <BasicNav/>
+  // <FormReact />
+  <ContactForm />
     
   
 
