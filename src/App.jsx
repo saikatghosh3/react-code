@@ -33,7 +33,15 @@ import './index.css';
 // import Bubbling from './components/Bubbling';
 // import BasicNav from './components/BasicNav';
 // import FormReact from './components/FormReact';
-import ContactForm from './components/ContactForm';
+// import ContactForm from './components/ContactForm';
+// import MemoLearn from './components/MemoLearn';
+// import UseEffect1 from './components/UseEffect1';
+// import FetchdataUseEffect from './components/FetchdataUseEffect';
+
+// The below one is for context hook understanding purpose 
+import Header1 from './components/Header1';
+import UserProvider from './components/context/UserProvider';
+
   // Example 1
   // const [color, setColor] = useState("red");
 
@@ -142,7 +150,19 @@ return (
   // <Bubbling />
   // <BasicNav/>
   // <FormReact />
-  <ContactForm />
+  // <ContactForm />
+  // <MemoLearn />
+  // <UseEffect1 />
+  // <FetchdataUseEffect />
+
+  // the below one is for context hook understanding purpose 
+
+  <UserProvider>
+  <div>
+    <Header1 />
+    <p>This is the main content of the app.</p>
+  </div>
+</UserProvider>
     
   
 
