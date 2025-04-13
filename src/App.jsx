@@ -1,5 +1,7 @@
 // import { useState } from 'react';
 // import FetchData from './components/FetchData';
+import RenderCounter from './components/RenderCounter';
+import ScrollTracker from './components/ScrollTracker';
 import './index.css';
 // import Lightning from './components/Light';
 // import UseState from './components/UseState';
@@ -39,8 +41,9 @@ import './index.css';
 // import FetchdataUseEffect from './components/FetchdataUseEffect';
 
 // The below one is for context hook understanding purpose 
-import Header1 from './components/Header1';
-import UserProvider from './components/context/UserProvider';
+// import Header1 from './components/Header1';
+// import UserProvider from './components/context/UserProvider';
+// import InputFocus from './components/InputFocus';
 
   // Example 1
   // const [color, setColor] = useState("red");
@@ -157,12 +160,15 @@ return (
 
   // the below one is for context hook understanding purpose 
 
-  <UserProvider>
-  <div>
-    <Header1 />
-    <p>This is the main content of the app.</p>
-  </div>
-</UserProvider>
+//   <UserProvider>
+//   <div>
+//     <Header1 />
+//     <p>This is the main content of the app.</p>
+//   </div>
+// </UserProvider>
+//<InputFocus />  
+//<RenderCounter />
+<ScrollTracker/>
     
   
 
@@ -171,3 +177,4 @@ return (
 }
 
 export default App;
+
