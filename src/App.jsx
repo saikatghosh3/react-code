@@ -1,7 +1,10 @@
 // import { useState } from 'react';
 // import FetchData from './components/FetchData';
-import RenderCounter from './components/RenderCounter';
-import ScrollTracker from './components/ScrollTracker';
+import DarkModeCard from './components/DarkModeCard';
+import Todo1 from './components/Todo1';
+
+// import RenderCounter from './components/RenderCounter';
+// import ScrollTracker from './components/ScrollTracker';
 import './index.css';
 // import Lightning from './components/Light';
 // import UseState from './components/UseState';
@@ -168,7 +171,9 @@ return (
 // </UserProvider>
 //<InputFocus />  
 //<RenderCounter />
-<ScrollTracker/>
+// <ScrollTracker/> 
+ // <DarkModeCard/>
+ <Todo1 />
     
   
 
